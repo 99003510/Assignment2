@@ -18,7 +18,6 @@ int main()
     {
         
 		perror("open");
-        
 		exit(1);
 	
     }
