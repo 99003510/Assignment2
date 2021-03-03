@@ -6,7 +6,7 @@
 #include<string.h>
 
 int main()
-{
+{   
     int maxlen=128;
     int fd,fd1;
 	char buf[maxlen];
