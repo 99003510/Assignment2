@@ -2,7 +2,7 @@
 #include<unistd.h>
 #include<string.h>
 #include<sys/wait.h>
-
+//minishell
 int main()
 {
     pid_t ret;
@@ -12,7 +12,7 @@ int main()
     printf("Enter your command:");
     scanf("%s", common);                  
     ret=fork();
-    
+    //checks if errors are there
     if(ret<0)
     {
         perror("fork");
@@ -30,7 +30,7 @@ int main()
     }
     else
     {
-        waitpid(-1,&status_shell,0); //wait(&status_shell);
+        waitpid(-1,&status_shell,0); //wait of (&status_shell);
         printf("parent--child exit status=%d\n",
 			WEXITSTATUS(status_shell));
     }
