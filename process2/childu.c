@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<sys/wait.h>
+#include<stdlib.h>
 
 int main()
 {
@@ -18,12 +19,11 @@ int main()
     }
     if(ret == 0)
     {
-                                   
-        executing_1 = execl("/usr/bin/gcc","gcc","-c","parent.c",NULL); 
-	execl("/bin/gcc","gcc","parent.o","-o",n,NULL); 
 
-                            
-        if(executing_1<0)
+          executing_1 = execl("/usr/bin/gcc","gcc","-c","parent.c",NULL); 
+	      execl("/bin/gcc","gcc","parent.o","-o",n,NULL);                             
+     
+             if(executing_1<0)
         {
             perror("execv");
             exit(2);
@@ -40,3 +40,4 @@ int main()
     }
     return 0;
 
+}
