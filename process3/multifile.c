@@ -34,12 +34,12 @@ int main()
     	c2=fork();
     	}
 	if(c2==0)
-    	execl("/bin/gcc","gcc","-c","sum.c",NULL);
+    	execl("/bin/gcc","gcc","-c","multiply.c",NULL);
     	else
     	{waitpid(c2, &return_value, 0);
     	c3=fork();}
 	if(c3==0)
-  	execl("/bin/gcc","gcc","sum.o","test.o","-o",s,NULL);
+  	execl("/bin/gcc","gcc","test.o","-o",s,NULL);
     	else
     	{
     	waitpid(c3, &return_value, 0);
@@ -52,3 +52,4 @@ int main()
 	  
 	} 	 
 	exit(0);
+}
