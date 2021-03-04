@@ -66,3 +66,4 @@ void sigquit()
 { 
     printf("Mommy and Daddy Killed me:(\n"); 
     exit(0); 
+}
