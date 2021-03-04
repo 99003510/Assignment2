@@ -46,3 +46,4 @@ int main()
     printf("the sum is %d ", total_sum);
   
     return 0; 
+}
