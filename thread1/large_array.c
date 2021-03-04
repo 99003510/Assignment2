@@ -1,6 +1,7 @@
 
 #include <pthread.h> 
-#include <iostream> 
+#include <stdio.h>
+
   
 
 #define MAX 16 
@@ -8,7 +9,7 @@
 // maximum number of threads taken here
 #define MAX_THREAD 4 
   
-using namespace std; 
+
   
 int a[] = { 2, 6, 8, 13, 17 ,19, 26, 29, 32, 57, 72, 108, 152, 172, 200, 222 }; 
 int sum[4] = { 0 }; 
@@ -42,6 +43,6 @@ int main()
     for (int i = 0; i < MAX_THREAD; i++) 
         total_sum += sum[i]; 
   
-    cout << "sum is " << total_sum << endl; 
+    printf("the sum is %d ", total_sum);
   
     return 0; 
